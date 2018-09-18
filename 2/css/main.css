@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c4f0c4;
+}
+
+.border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #d0ffd0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  left: 38px;
+}
+
+.body {
+  height: 50%;
+  width: 50%;
+  background-color: #99AAB5;
+  border-radius: 40%;
+  position: relative;
+}
+.body .head {
+  height: 75%;
+  width: 81%;
+  background-color: #99AAB5;
+  border-radius: 54% 50% 0 30%;
+  position: absolute;
+  left: -101px;
+  top: -15px;
+}
+.body .head .eye {
+  width: 10%;
+  height: 10%;
+  background-color: #292F33;
+  position: absolute;
+  border-radius: 50%;
+  top: 45%;
+  left: 30%;
+  z-index: 5;
+}
+.body .head .eye .inner-eye {
+  width: 35%;
+  height: 35%;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  left: 10px;
+  top: 1px;
+}
+.body .head .trompa {
+  height: 75%;
+  width: 22%;
+  background-color: #99AAB5;
+  position: absolute;
+  bottom: -70px;
+  border-radius: 0 0 34% 40%;
+}
+.body .head .trompa .inner {
+  height: 40%;
+  width: 100%;
+  background-color: #99AAB5;
+  position: absolute;
+  bottom: -23px;
+  left: 16px;
+  transform: rotate(-34deg);
+  border-radius: 10% 0 34% 40%;
+}
+.body .head .mood {
+  height: 21%;
+  width: 21.5%;
+  background-color: #d0ffd0;
+  position: absolute;
+  bottom: -19px;
+  left: 25.5%;
+  transform: rotate(-45deg);
+}
+.body .head-copy {
+  height: 61%;
+  width: 53%;
+  background-color: #99AAB5;
+  border-radius: 54% 50% 30% 30%;
+  border-right: 8px solid #464d52;
+  border-bottom: 3px solid #464d52;
+  position: absolute;
+  z-index: 3;
+  top: -3px;
+}
+.body .leg {
+  height: 58%;
+  width: 36%;
+  background-color: #99AAB5;
+  position: absolute;
+  bottom: -43px;
+  border-radius: 40%;
+}
+.body .leg.rigth {
+  right: 6px;
+}
+.body .leg.left {
+  left: 6px;
+}
+.body .cola {
+  width: 10%;
+  height: 52%;
+  background-color: #99AAB5;
+  position: absolute;
+  /* border: 1px solid red; */
+  bottom: 73px;
+  right: -18px;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+/*# sourceMappingURL=main.css.map */
