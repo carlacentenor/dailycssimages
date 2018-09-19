@@ -1,0 +1,234 @@
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    @extend %flex-center;
+    height: 100vh;
+}
+
+.container {
+    @extend %flex-center;
+    width: $width-container;
+    height: $heigth-container;
+    border: 1px solid red;
+    position: relative;
+
+    @media screen and (min-width: 640px) {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.head {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: $color-yellow;
+    position: relative;
+}
+
+.head-copy {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $color-yellow;
+    position: absolute;
+    z-index: 3;
+
+}
+
+.eye {
+    width: 12%;
+    height: 18%;
+    border-radius: 40%;
+    background-color: $color-grey-dark;
+    position: absolute;
+    top: 45%;
+    z-index: 4;
+
+    &.left {
+        left: 20%;
+    }
+
+    &.rigth {
+        right: 20%;
+    }
+}
+
+.inner-eye {
+    width: 45%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 27.5%;
+}
+
+.ear {
+    width: 32%;
+    height: 79%;
+    background-color: $color-orange;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    top: -11%;
+    z-index: 1;
+
+    &.left {
+        left: 6%;
+        transform: rotate(-35deg);
+    }
+
+    &.rigth {
+        right: 6%;
+        transform: rotate(35deg);
+    }
+}
+
+.inner-ear {
+    width: 60%;
+    height: 90%;
+    background-color: $color-orange-dark;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    z-index: 1;
+    top: 12%;
+
+    &.left {
+        right: 30%;
+    }
+
+    &.rigth {
+        left: 30%;
+
+    }
+}
+
+.nose {
+    width: 15%;
+    height: 22.5%;
+    background-color: $color-pink;
+    border-radius: 90% 30% 30% 90%/50% 50% 50% 50%;
+    position: absolute;
+    z-index: 4;
+    left: 42.5%;
+    top: 67%;
+    transform: rotate(-90deg);
+}
+
+.mooth {
+    width: 37%;
+    height: 48%;
+    background-color: $color-nude;
+    position: absolute;
+    z-index: 3;
+    border-radius: 90% 30% 30% 90%/50% 50% 50% 50%;
+    transform: rotate(-90deg);
+    left: 31.5%;
+    top: 66%;
+}
+
+.strip {
+    width: 40%;
+    height: 8%;
+    position: absolute;
+    z-index: 4;
+    background-color: $color-grey-dark;
+    left: 30%;
+    top: 10%;
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        border-width: 0 0 12px 12px;
+        border-style: solid;
+        border-color: $color-grey-dark;
+        position: absolute;
+        left: -5px;
+        @media screen and (min-width: 640px) {
+            border-width: 0 0 19px 14px;
+        }
+
+    }
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        border-width: 0 0 12px 12px;
+        border-style: solid;
+        border-color: $color-grey-dark;
+        position: absolute;
+        right: -5px;
+        @media screen and (min-width: 640px) {
+            border-width: 0 0 19px 14px;
+        }
+    }
+    &.second {
+        width: 20%;
+        height: 8%;
+        left: 40%;
+        top: 22%;
+    }
+    &.third {
+        width: 10%;
+        height: 8%;
+        left: 45%;
+        top: 34%;
+    }
+    &.four {
+        width: 10%;
+        height: 8%;
+        left: 9%;
+        top: 67%;
+    }
+    &.five {
+        width: 10%;
+        height: 8%;
+        left:81%;
+        top: 67%;
+    }
+}
+
+.hair{
+    height: 40%;
+    width: 40%;
+    clip-path: polygon(33.59% -3.54%, 71.97% 102.53%, 100% 0%, 68.43% -3.03%);
+    background-color: $color-nude-opacity;
+    position: absolute;
+    &.hair-1{
+        left: -15%;
+        bottom: 0;
+        transform: rotate(10deg);
+    }
+    &.hair-2{
+        left: -25%;
+        bottom: 20px;
+        transform: rotate(30deg);
+    }
+    &.hair-3{
+        left: -25%;
+        bottom: 40px;
+        transform: rotate(50deg);
+    }
+    &.hair-4{
+        right: -5%;
+        bottom: 0px;
+        transform: rotate(-10deg);
+    }
+    &.hair-5{
+        right: -15%;
+        bottom: 20px;
+        transform: rotate(-30deg);
+    }
+    &.hair-6{
+        right: -15%;
+        bottom: 40px;
+        transform: rotate(-50deg);
+    }
+  
+    
+}
