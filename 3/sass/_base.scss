@@ -5,8 +5,8 @@
 }
 
 %dimension-head {
-    width: 60%;
-    height: 53%;
+    width: 165px;
+    height: 150px;
     border-radius: 50%;
 }
 
@@ -18,9 +18,8 @@ body {
 
 .container {
     @extend %flex-center;
-    width: 70vh;
-    height: 70vh;
-   
+    width: 55vh;
+    height: 55vh;
     position: relative;
     border-radius: 50%;
     background-color: $color-light-nude;
@@ -36,13 +35,13 @@ body {
 }
 
 .face {
-    width: 58%;
-    height: 53%;
+    width: 90px;
+    height: 75px;
     border-radius: 50%;
     background-color: #FACF8B;
     position: absolute;
-    left: 20%;
-    top: 18.5%;
+    left: (165px - 90px)/2;
+    top: (150px - 75px)/2;
 }
 
 .cheeks {
@@ -71,7 +70,7 @@ body {
     height: 39%;
     width: 45%;
     position: absolute;
-    bottom: 37px;
+    bottom: 20px;
     left: 27%
 }
 
@@ -85,13 +84,11 @@ body {
     z-index: 2;
 
     &.rigth {
-        right: 55px;
-
+        right: 42px;
     }
 
     &.left {
-        left: 55px;
-
+        left: 42px;
     }
 }
 
@@ -116,13 +113,11 @@ body {
     top: 53%;
 
     &.rigth {
-        right: 28px;
-
+        right: 20px;
     }
 
     &.left {
-        left: 28px;
-
+        left: 20px;
     }
 }
 
@@ -160,7 +155,7 @@ body {
 
 .tooth {
     background-color: $color-white;
-    height: 28%;
+    height: 40%;
     width: 24%;
     position: absolute;
     top: 40%;
@@ -185,7 +180,7 @@ body {
     }
 }
 
-.inner-ear{
+.inner-ear {
     background-color: $color-peach;
     height: 50%;
     width: 50%;
@@ -196,7 +191,7 @@ body {
 
 }
 
-.body{
+.body {
     background-color: $color-brown;
     height: 35%;
     width: 40%;
@@ -206,7 +201,7 @@ body {
     border-bottom: 5px solid $color-brown-dark;
 }
 
-.body-copy{
+.body-copy {
     background-color: #A45C22;
     height: 100%;
     width: 100%;
@@ -215,33 +210,55 @@ body {
     z-index: 2
 }
 
-.arm{
+.arm {
     background-color: $color-brown;
     height: 20%;
     width: 50%;
     border-radius: 50%;
     position: absolute;
-    top: 34px;
+    top: 20px;
     z-index: 4;
+    
+
     &.rigth {
-        right: -40px;
-        transform: rotate(35deg)
+        right: -32px;
+        transform: rotate(-35deg);
+        animation-name: arm;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+       
     }
 
     &.left {
-        left: -40px;
+        left: -32px;
         transform: rotate(-35deg)
     }
 }
 
-.leg{
+
+@keyframes arm {
+    0% {
+        transform-origin: top left;
+      transform: rotate(-45deg)
+    }
+  
+    100% {
+        transform-origin: top left;
+        transform: rotate(5deg)
+    }
+  }
+
+.leg {
     background-color: $color-brown;
     height: 26%;
     width: 55%;
     border-radius: 50%;
     position: absolute;
-    bottom: 0;
+    bottom: -14px;
     z-index: 4;
+
     &.rigth {
         right: -12px;
         transform: rotate(35deg)
@@ -253,22 +270,24 @@ body {
     }
 }
 
-.cola{
-    background-color: #35241A;
-    height: 100%;
+.cola {
+    background-color: $color-dark-chocolate;
+    height: 114%;
     width: 50%;
     border-radius: 50%;
     position: absolute;
-    bottom: 20px;
+    bottom: -4px;
     transform: rotate(-45deg);
-    left: -52px;
+    left: -41px;
+
 }
 
-.floor{
-    width: 29%;
-    height: 4%;
+.floor {
+    width: 140%;
+    height: 16%;
     border-radius: 50%;
     background-color: #DFCDA9;
     position: absolute;
-    bottom: 50px;
+    bottom: -35px;
+    left: -26px
 }
