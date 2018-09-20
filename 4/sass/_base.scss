@@ -7,13 +7,15 @@
 body {
     @extend %flex-center;
     height: 100vh;
+    background-color: rgb(214, 237, 247);
 }
 
 .container {
     @extend %flex-center;
     width: $width-container;
     height: $heigth-container;
-    border: 1px solid red;
+    background-color: rgb(228, 241, 247);
+    border-radius: 50%;
     position: relative;
 
     @media screen and (min-width: 640px) {
@@ -49,6 +51,7 @@ body {
     top: 45%;
     z-index: 4;
 
+
     &.left {
         left: 20%;
     }
@@ -57,6 +60,8 @@ body {
         right: 20%;
     }
 }
+
+
 
 .inner-eye {
     width: 45%;
@@ -79,11 +84,41 @@ body {
     &.left {
         left: 6%;
         transform: rotate(-35deg);
+        animation-name: ear-l;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
     }
 
     &.rigth {
         right: 6%;
         transform: rotate(35deg);
+        animation-name: ear-r;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes ear-l {
+    0% {
+        transform: rotate(-35deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes ear-r {
+    0% {
+        transform: rotate(35deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
     }
 }
 
@@ -112,7 +147,7 @@ body {
     background-color: $color-pink;
     border-radius: 90% 30% 30% 90%/50% 50% 50% 50%;
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     left: 42.5%;
     top: 67%;
     transform: rotate(-90deg);
@@ -138,6 +173,7 @@ body {
     background-color: $color-grey-dark;
     left: 30%;
     top: 10%;
+
     &:after {
         content: "";
         width: 0;
@@ -148,11 +184,13 @@ body {
         border-color: $color-grey-dark;
         position: absolute;
         left: -5px;
+
         @media screen and (min-width: 640px) {
             border-width: 0 0 19px 14px;
         }
 
     }
+
     &:before {
         content: "";
         width: 0;
@@ -163,72 +201,106 @@ body {
         border-color: $color-grey-dark;
         position: absolute;
         right: -5px;
+
         @media screen and (min-width: 640px) {
             border-width: 0 0 19px 14px;
         }
     }
+
     &.second {
         width: 20%;
         height: 8%;
         left: 40%;
         top: 22%;
     }
+
     &.third {
         width: 10%;
         height: 8%;
         left: 45%;
         top: 34%;
     }
+
     &.four {
         width: 10%;
         height: 8%;
         left: 9%;
         top: 67%;
     }
+
     &.five {
         width: 10%;
         height: 8%;
-        left:81%;
+        left: 81%;
         top: 67%;
     }
 }
 
-.hair{
+.hair {
     height: 40%;
     width: 40%;
     clip-path: polygon(33.59% -3.54%, 71.97% 102.53%, 100% 0%, 68.43% -3.03%);
     background-color: $color-nude-opacity;
     position: absolute;
-    &.hair-1{
+
+    &.hair-1 {
         left: -15%;
         bottom: 0;
         transform: rotate(10deg);
     }
-    &.hair-2{
+
+    &.hair-2 {
         left: -25%;
         bottom: 20px;
         transform: rotate(30deg);
     }
-    &.hair-3{
+
+    &.hair-3 {
         left: -25%;
         bottom: 40px;
         transform: rotate(50deg);
     }
-    &.hair-4{
+
+    &.hair-4 {
         right: -5%;
         bottom: 0px;
         transform: rotate(-10deg);
     }
-    &.hair-5{
-        right: -15%;
+
+    &.hair-5 {
+        right: -13%;
         bottom: 20px;
         transform: rotate(-30deg);
     }
-    &.hair-6{
-        right: -15%;
+
+    &.hair-6 {
+        right: -13%;
         bottom: 40px;
         transform: rotate(-50deg);
     }
-  
-    
+
+
+}
+
+.checks {
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    border-radius: 50%;
+    border-bottom: 3px solid $color-nude-dark;
+    bottom: 6px;
+    background-color: $color-nude;
+    z-index: 4;
+
+    &.rigth {
+        right: 48%;
+        border-right: 3px solid $color-nude-dark;
+        transform: rotate(33deg);
+    }
+
+    &.left {
+        left: 48%;
+        border-left: 3px solid $color-nude-dark;
+        transform: rotate(-33deg);
+    }
 }
